@@ -1,0 +1,113 @@
+<!-- 
+<div class="alert alert-danger" role="alert" *ngIf="errorMsg">
+    {{errorMsg}}
+   </div>
+  
+   <div class="row">
+     <div class="col-sm-3" routerLink="" *ngFor="let c of courses">
+       <div class="card" >
+         <div class="card-body">
+           <h5 class="card-title"> Course Name:{{c.courseName}}</h5>
+           <h3 class="card-body">Course Hours: {{c.courseHours}}</h3>
+
+
+           <br> <br>
+  
+        <button type="button" class="btn btn-primary" name="item-1-button"
+        id="item-1-button" routerLink="/product/{{c.courseId}}" >View Course Details</button>
+  
+  
+     </div>
+   </div>
+     </div>
+   </div>
+   -->
+
+
+     
+<div
+ 
+class="container">
+    <h2>Course List</h2>
+
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Duration</th>
+          <th scope="col">Description</th>
+          <th scope="col">Training By</th>
+          <th scope="col">Details</th>
+        </tr>
+      </thead>
+     
+      <tbody *ngFor="let c of courses">
+       
+        <tr>
+          <th scope="row">*</th>
+          <td>{{c.courseName}}</td>
+          <td>{{c.courseHours}}</td>
+          <td>{{c.courseDescription}}</td>
+          <td>{{c.trainingBy}}</td>
+
+          <td><button type="button" class="btn btn-primary" routerLink="/{{c.courseId}}">view </button></td>
+
+        </tr>
+      
+        <!-- <tr>
+          <th scope="row">2</th>
+          <td>Spring Boot for Beginners</td>
+          <td>30 hours</td>
+          <td>Learn the basics of Spring Boot framework</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Cloud Computing Essentials</td>
+          <td>20 hours</td>
+          <td>Gain a foundational understanding of cloud computing concepts</td>
+        </tr> -->
+      </tbody>
+
+      
+    </table>
+  </div>
+
+
+
+<!-- 
+    
+<div
+ 
+class="container">
+    <h2>Course Details</h2>
+
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" 
+      class="card-img-top"
+      style="height: 50px; width: 50px;"
+ 
+alt="Course Image">
+
+      
+<div
+ 
+class="card-body">
+
+        
+<h5
+ 
+class="card-title">Course Name</h5>
+
+        
+<p
+ 
+class="card-text">Course Description</p>
+        <p class="card-text">Duration: 40 hours</p>
+        <p class="card-text">Start Date: 2023-10-04</p>
+        <p class="card-text">End Date: 2023-11-11</p>
+        <p class="card-text">Instructor: John Doe</p>
+        <a href="#" class="btn btn-primary">Enroll Now</a>
+      </div>
+    </div>
+  </div> -->

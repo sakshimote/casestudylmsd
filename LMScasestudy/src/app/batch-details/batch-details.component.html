@@ -1,0 +1,30 @@
+
+
+
+<h3>Students in batch</h3>
+
+
+<div>
+    <p *ngIf="noStudents">No students enrolled for this course</p>
+    </div>
+
+<table class="table" *ngIf="!noStudents">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let s of students" >
+
+        
+
+        <tr>
+            <td>{{s.userName}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.phoneNumber}}</td>
+        </tr>
+        
+    </tbody>
+</table>

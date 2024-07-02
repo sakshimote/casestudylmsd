@@ -1,0 +1,135 @@
+<div  *ngFor="let t of trainers" >
+<div class="card">
+    <div class="card-header">
+      Mentor Profile
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{t.firstName}} {{t.lastName}}</h5>
+      <p class="card-text">Designation: {{t.designation}}</p>
+      <p class="card-text">Enagaged Hours: {{t.engagedHours}}</p>
+      <p class="card-text">Expertise: {{t.expertise}}</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" routerLink="/trainerDetails/{{t.trainerId}}">View Details</button>
+    </div>
+  </div>
+<br>
+ 
+</div>
+  
+
+<!-- 
+  <br>
+  <div class="card">
+    <div class="card-header">
+      Mentor Profile
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Mentor Name</h5>
+      <p class="card-text">Mentor Designation</p>
+      <p class="card-text">Mentor Expertise</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary">View Details</button>
+    </div>
+  </div>
+<br>
+
+
+  <div class="card">
+    <div class="card-header">
+      Mentor Profile
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Mentor Name</h5>
+      <p class="card-text">Mentor Designation</p>
+      <p class="card-text">Mentor Expertise</p>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary">View Details</button>
+    </div>
+  </div> -->
+
+  <!-- <div class="card">
+    <div class="card-header">
+      Trainings Delivered by Mentor
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Training Name</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Java Fundamentals</td>
+            <td>40 hours</td>
+            <td>A comprehensive introduction to Java programming</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Spring Boot for Beginners</td>
+            <td>30 hours</td>
+            <td>Learn the basics of Spring Boot framework</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Cloud Computing Essentials</td>
+            <td>20 hours</td>
+            <td>Gain a foundational understanding of cloud computing concepts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      Batches Mentored by Mentor
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Batch Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Number of Trainees</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Java Fundamentals Batch 1</td>
+            <td>2023-10-04</td>
+            <td>2023-11-11</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Spring Boot for Beginners Batch 2</td>
+            <td>2023-10-18</td>
+            <td>2023-11-25</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Cloud Computing Essentials Batch 3</td>
+            <td>2023-11-01</td>
+            <td>2023-12-02</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+ -->

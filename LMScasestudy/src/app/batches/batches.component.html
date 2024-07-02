@@ -1,0 +1,37 @@
+
+
+<div>  
+<div class="card">
+    <div class="card-header">
+     All batches
+    </div>
+    <div class="card-body" >
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Batch Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Trainer</th>
+            <th scope="col">Course name</th>
+            <th scope="col">details</th>
+            
+          </tr>
+        </thead>
+        <tbody *ngFor="let b of batches" >
+          <tr>
+            <th scope="row">*</th>
+            <td>{{b.batchName}}</td>
+            <td>{{b.batchStartDate}}</td>
+            <td>{{b.batchEndDate}}</td>
+            <td>{{b.trainingBy}}</td>
+            <td>{{b.trainingOn}}</td>
+            <td><button type="button" class="btn btn-primary" routerLink="/details/{{b.batchId}}"> View </button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
